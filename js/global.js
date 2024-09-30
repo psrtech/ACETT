@@ -365,3 +365,18 @@ if (jQuery('#rev_slider_2_1').length>0){
     }
 }
 
+
+
+// Open modal
+function openModal(imgElement) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("imgModal");
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
+}
+
+// Close modal
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
