@@ -6663,3 +6663,52 @@ a.tribe-events-read-more:hover,
         margin-right: 0; /* Remove right margin */
     }
 }
+
+#contact {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	padding: 40px 20px;
+	margin-bottom: 100px;
+}
+
+.sc_section_inner {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.sc_googlemap_wrap {
+	flex: 1;
+	min-width: 300px;
+	max-width: 600px;
+	margin-right: 20px;
+	margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.sc_googlemap_content {
+	flex: 1;
+	min-width: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.sc_form_wrap {
+	width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.sc_section_inner {
+		flex-direction: column; /* Stack elements on smaller screens */
+	}
+	.sc_googlemap_wrap,
+	.sc_googlemap_content {
+		margin-right: 0; /* Remove right margin */
+		max-width: 100%; /* Full width on smaller screens */
+	}
+}
