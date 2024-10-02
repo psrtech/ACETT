@@ -380,3 +380,28 @@ function closeModal() {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
 }
+
+
+// Get references to elements
+const menuButton = document.querySelector('.menu_button');
+const sideWrap = document.querySelector('.side_wrap');
+const closeButton = document.querySelector('.close');
+const mask = document.querySelector('.mask');
+
+// Function to open the side menu
+menuButton.addEventListener('click', () => {
+    sideWrap.classList.add('open'); // Show the menu
+    mask.classList.add('active'); // Show the overlay
+});
+
+// Function to close the side menu
+closeButton.addEventListener('click', () => {
+    sideWrap.classList.remove('open'); // Hide the menu
+    mask.classList.remove('active'); // Hide the overlay
+});
+
+// Close the menu when clicking on the mask
+mask.addEventListener('click', () => {
+    sideWrap.classList.remove('open'); // Hide the menu
+    mask.classList.remove('active'); // Hide the overlay
+});
