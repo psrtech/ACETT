@@ -134,23 +134,7 @@
                                     </div>
                                 </div>
                                 <div class="menu_main_social_wrap">
-                                    <div class="top_panel_top_socials">
-                                        <div class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_small">
-                                            <div class="sc_socials_item">
-                                                <a href="#" target="_blank" class="social_icons social_twitter">
-                                                    <span class="icon-twitter"></span>
-                                                </a>
-                                            </div><div class="sc_socials_item">
-                                            <a href="#" target="_blank" class="social_icons social_facebook">
-                                                <span class="icon-facebook"></span>
-                                            </a>
-                                        </div><div class="sc_socials_item">
-                                            <a href="#" target="_blank" class="social_icons social_gplus">
-                                                <span class="icon-gplus"></span>
-                                            </a>
-                                        </div>
-                                        </div>
-                                    </div>
+
                                     <div class="menu_main_wrap">
                                         <a href="#" class="menu_main_responsive_button icon-menu"></a>
                                         <nav class="menu_main_nav_area">
@@ -196,7 +180,7 @@
 
                 <div class="header_mobile">
                     <div class="content_wrap">
-                        <div class="menu_button icon-menu" id="menuButton">☰</div>
+                        <div class="menu_button icon-menu" id="menuButton"></div>
                         <div class="logo">
                             <a href="index.html">
                                 <h2 style="margin-top: -10px;" class="logo_main">ACE</h2>
@@ -293,6 +277,11 @@
                             box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
                             transition: right 0.3s; /* Animation */
                             overflow-y: auto; /* Allow scrolling if content overflows */
+                        }
+                                            @media (max-width: 768px) {
+                            .top_panel_wrap {
+                                display: none; /* Hide the header */
+                            }
                         }
             
                         .side_wrap.active {
