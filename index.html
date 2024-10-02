@@ -111,7 +111,7 @@
                                             </ul>
                                         </li>
                                         <li class="top_panel_link">
-                                            <a href="court-reservation.html">Reserve a court</a>
+                                            <a href="#contact">Contact Us</a>
                                         </li>
                                     </ul>
 
@@ -301,7 +301,7 @@
                             </div>
                         </div>
                         <div class="top_panel_link">
-                            <a href="court-reservation.html">Reserve a court</a>
+                            <a href="#contact">Contact Us</a>
                         </div>
                     </div>
                     <div class="mask"></div>
@@ -670,21 +670,44 @@
                                             </p>
                                             
                                             <!-- /The Latest Photo section -->
-                                            <div class="gallery" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+                                            <!-- First row with video -->
+                                            <div class="gallery" style="display: grid; grid-template-columns: 1fr; gap: 10px;">
                                                 <div class="gallery-item" style="overflow: hidden;">
-                                                    <img src="./images/ace1.jpeg" alt="ACE Image 1" onclick="openModal(this)" style="width: 100%; transition: transform 0.3s ease-in-out; cursor: pointer;">
-                                                </div>
-                                                <div class="gallery-item" style="overflow: hidden;">
-                                                    <img src="./images/ace2.jpeg" alt="ACE Image 2" onclick="openModal(this)" style="width: 100%; transition: transform 0.3s ease-in-out; cursor: pointer;">
-                                                </div>
-                                                <div class="gallery-item" style="overflow: hidden;">
-                                                    <img src="./images/ace3.jpeg" alt="ACE Image 3" onclick="openModal(this)" style="width: 100%; transition: transform 0.3s ease-in-out; cursor: pointer;">
-                                                </div>
-                                                <div class="gallery-item" style="overflow: hidden;">
-                                                    <img src="./images/ace4.jpeg" alt="ACE Image 4" onclick="openModal(this)" style="width: 100%; transition: transform 0.3s ease-in-out; cursor: pointer;">
+                                                    <video id="aceVideo" width="100%" style="cursor: pointer;" onclick="playVideo()">
+                                                        <source src="./images/video.mp4" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                    </video>
                                                 </div>
                                             </div>
-                    
+
+                                            <!-- Second row with 8 images -->
+                                            <div class="gallery" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 50px;">
+                                                <div class="gallery-item" style="overflow: hidden;">
+                                                    <img src="./images/ace11.jpeg" alt="ACE Image 1" onclick="openModal(this)" style="width: 100%; height: 200px; object-fit: cover; object-position: top; transition: transform 0.3s ease-in-out; cursor: pointer;">
+                                                </div>
+                                                <div class="gallery-item" style="overflow: hidden;">
+                                                    <img src="./images/ace2.jpeg" alt="ACE Image 2" onclick="openModal(this)" style="width: 100%; height: 200px; object-fit: cover; object-position: top; transition: transform 0.3s ease-in-out; cursor: pointer;">
+                                                </div>
+                                                <div class="gallery-item" style="overflow: hidden;">
+                                                    <img src="./images/ace3.jpeg" alt="ACE Image 3" onclick="openModal(this)" style="width: 100%; height: 200px; object-fit: cover; object-position: top; transition: transform 0.3s ease-in-out; cursor: pointer;">
+                                                </div>
+                                                <div class="gallery-item" style="overflow: hidden;">
+                                                    <img src="./images/ace4 (1).jpeg" alt="ACE Image 4" onclick="openModal(this)" style="width: 100%; height: 200px; object-fit: cover; object-position: top; transition: transform 0.3s ease-in-out; cursor: pointer;">
+                                                </div>
+                                                <div class="gallery-item" style="overflow: hidden;">
+                                                    <img src="./images/ace5.jpeg" alt="ACE Image 5" onclick="openModal(this)" style="width: 100%; height: 200px; object-fit: cover; object-position: top; transition: transform 0.3s ease-in-out; cursor: pointer;">
+                                                </div>
+                                                <div class="gallery-item" style="overflow: hidden;">
+                                                    <img src="./images/ace6.jpeg" alt="ACE Image 6" onclick="openModal(this)" style="width: 100%; height: 200px; object-fit: cover; object-position: top; transition: transform 0.3s ease-in-out; cursor: pointer;">
+                                                </div>
+                                                <div class="gallery-item" style="overflow: hidden;">
+                                                    <img src="./images/ace7.jpeg" alt="ACE Image 7" onclick="openModal(this)" style="width: 100%; height: 200px; object-fit: cover; object-position: top; transition: transform 0.3s ease-in-out; cursor: pointer;">
+                                                </div>
+                                                <div class="gallery-item" style="overflow: hidden;">
+                                                    <img src="./images/ace8 (1).jpeg" alt="ACE Image 8" onclick="openModal(this)" style="width: 100%; height: 200px; object-fit: cover; object-position: top; transition: transform 0.3s ease-in-out; cursor: pointer;">
+                                                </div>
+                                            </div>
+                                            
                                             <!-- Modal for Zoom -->
                                             <div id="myModal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.9); text-align: center; margin-top: 100px;">
                                                 <!-- Close button -->
@@ -693,7 +716,7 @@
                                                 <!-- Modal content (Image) -->
                                                 <img class="modal-content" id="imgModal" style="max-width: 90%; max-height: 90%; margin: 20px auto 0; display: block; transition: transform 0.3s ease-in-out;">
                                             </div>
-                    
+                                            
                                             <script>
                                                 // Open modal
                                                 function openModal(imgElement) {
@@ -710,7 +733,7 @@
                                                     var modal = document.getElementById("myModal");
                                                     modal.style.display = "none";
                                                 }
-                    
+                                            
                                                 // Close modal when clicking outside the image
                                                 document.getElementById('myModal').addEventListener('click', function(event) {
                                                     var modalImg = document.getElementById('imgModal');
@@ -719,6 +742,9 @@
                                                     }
                                                 });
                                             </script>
+                                            
+                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -1312,7 +1338,7 @@
                                 <!-- /Club membership -->
                                 <!-- Google Map -->
                                 
-                                <div class="sc_section" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 20px; margin-bottom: 100px;">
+                                <div  id="contact" class="sc_section" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 20px; margin-bottom: 100px;">
                                     <div class="sc_section_inner" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; margin-left: -500px;">
                                         <!-- Google Map Section -->
                                         <div id="sc_googlemap_1_wrap" class="sc_googlemap_wrap" style="width: 100%; max-width: 600px; display: flex; justify-content: center; align-items: center; margin-bottom: 20px;">
@@ -1407,11 +1433,12 @@
                                     <h5 class="widget_title">Contact us</h5>
                                     <div class="textwidget">
                                         <strong>Address</strong>
-                                        <p>8500 Lorem Street, Chicago, IL, 55030</p>
+                                        <p>1, Red Hills High Road, opposite to Ayyappan Temple, Shanmugapuram,
+                                            Surapet, Chennai, Tamil Nadu 600066</p>
                                         <strong>Call Us</strong>
-                                        <p>(123) 456-78-90</p>
+                                        <p>+91 8610014441, +91 9962125534</p>
                                         <strong>Email</strong>
-                                        <p>sales@yoursite.com</p>
+                                        <p>sudhakarktt82@ymail.com</p>
                                     </div>
                                 </aside>
                             </div>
@@ -1475,7 +1502,7 @@
             </div>
         </div>
         <!-- Side block with weather plugin -->
-        <a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a>
+        <!-- <a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a> -->
 
         <script type="text/javascript" src="js/jquery/jquery.js"></script>
 
