@@ -1158,7 +1158,7 @@
                                     </div>
                                 </div>
                                 <!-- /Club coaches section -->
-                                <!-- Testimonials section -->
+                                <!-- Testimonials section 
                                 <div class="sc_section margin_top_null margin_bottom_null aligncenter testimonials_custom_block_3" style="background-image: url('./images/table.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
                                     <div class="sc_section_inner">
                                         <div class="sc_section_overlay">
@@ -1210,7 +1210,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 
                                 <!-- /Testimonials section -->
                                 <!-- Club membership -->
@@ -1332,57 +1332,34 @@
                                 <!-- /Club membership -->
                                 <!-- Google Map -->
                                 
-                                <div id="contact" class="sc_section" style="display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap; padding: 40px 20px; margin-bottom: 100px;">
-                                    <div class="sc_section_inner" style="display: flex; flex-direction: row; width: 100%; max-width: 1200px;">
-                                
-                                        <!-- Google Map Section -->
-                                        <div id="sc_googlemap_1_wrap" class="sc_googlemap_wrap" style="flex: 1; min-width: 300px; max-width: 600px; margin-right: 20px;">
-                                            <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509974!2d144.9537363156805!3d-37.817209979751596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f1b8b81%3A0x5045675218ceed30!2sU.S.%20Bank!5e0!3m2!1sen!2sus!4v1614906439823!5m2!1sen!2sus"
-                                                width="600"
-                                                height="450"
-                                                style="border:0; width: 100%; height: 100%;"
-                                                allowfullscreen=""
-                                                loading="lazy"
-                                                aria-label="Google Map showing U.S. Bank">
-                                            </iframe>
+                                <div id="contact" style="display: flex; justify-content: center; align-items: flex-start; padding: 40px 20px; margin-bottom: 100px; background-image: url('./images/tale2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                                    <div class="form-container" style="max-width: 400px; width: 100%; background: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 8px;">
+                                        <h2 style="text-align: center; font-size: 28px; font-weight: bold;">Contact Us</h2>
+                                        <div style="text-align: center; margin-bottom: 20px; color: #777;">
+                                            Please fill out the form below and we will get back to you shortly.
                                         </div>
-                                
-                                        <!-- Contact Form Section -->
-                                        <div class="sc_googlemap_content">
-                                            <div id="sc_form_1_wrap" class="sc_form_wrap">
-                                                <h2 class="sc_form_title" style="text-align: center; font-size: 28px; font-weight: bold;">Contact Us</h2>
-                                                <div class="sc_form_descr" style="text-align: center; margin-bottom: 20px; color: #777;">
-                                                    Please fill out the form below and we will get back to you shortly.
-                                                </div>
-                                                <form id="sc_form_1_form" method="post" action="include/sendmail.php">
-                                                    <div class="sc_form_info">
-                                                        <div class="sc_form_item">
-                                                            <label class="required" for="sc_form_username">Name</label>
-                                                            <input id="sc_form_username" type="text" name="username" placeholder="Name *" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                                                        </div>
-                                                        <div class="sc_form_item">
-                                                            <label class="required" for="sc_form_email">E-mail</label>
-                                                            <input id="sc_form_email" type="email" name="email" placeholder="E-mail *" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                                                        </div>
-                                                        <div class="sc_form_item">
-                                                            <label class="required" for="sc_form_subj">Subject</label>
-                                                            <input id="sc_form_subj" type="text" name="subject" placeholder="Subject" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                                                        </div>
-                                                    </div>
-                                                    <div class="sc_form_item">
-                                                        <label class="required" for="sc_form_message">Message</label>
-                                                        <textarea id="sc_form_message" name="message" placeholder="Message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
-                                                    </div>
-                                                    <div class="sc_form_item" style="text-align: center;">
-                                                        <button type="submit" style="padding: 10px 20px; background-color: #A4BB63; color: white; border: none; border-radius: 4px; cursor: pointer;">Send Message</button>
-                                                    </div>
-                                                    <div class="result" style="text-align: center;"></div>
-                                                </form>
+                                        <form id="contact-form" method="post" action="include/sendmail.php" style="display: flex; flex-direction: column;">
+                                            <div class="form-item" style="margin-bottom: 15px;">
+                                                <label class="required" for="form-name" style="margin-bottom: 5px;">Name</label>
+                                                <input id="form-name" type="text" name="username" placeholder="Name *" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                                             </div>
-                                        </div>
+                                            <div class="form-item" style="margin-bottom: 15px;">
+                                                <label class="required" for="form-email" style="margin-bottom: 5px;">E-mail</label>
+                                                <input id="form-email" type="email" name="email" placeholder="E-mail *" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
                                             </div>
-                                        </div>
+                                            <div class="form-item" style="margin-bottom: 15px;">
+                                                <label class="required" for="form-subject" style="margin-bottom: 5px;">Subject</label>
+                                                <input id="form-subject" type="text" name="subject" placeholder="Subject" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                                            </div>
+                                            <div class="form-item" style="margin-bottom: 15px;">
+                                                <label class="required" for="form-message" style="margin-bottom: 5px;">Message</label>
+                                                <textarea id="form-message" name="message" placeholder="Message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                                            </div>
+                                            <div class="form-item" style="text-align: center;">
+                                                <button type="submit" style="padding: 10px 20px; background-color: #A4BB63; color: white; border: none; border-radius: 4px; cursor: pointer;">Send Message</button>
+                                            </div>
+                                            <div class="result" style="text-align: center; margin-top: 10px;"></div>
+                                        </form>
                                     </div>
                                 </div>
                                 
