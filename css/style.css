@@ -6650,3 +6650,16 @@ a.tribe-events-read-more:hover,
     transform: translateY(-10px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+
+
+@media (max-width: 768px) {
+    .sc_section_inner {
+        flex-direction: column; /* Stack elements on smaller screens */
+    }
+    
+    #sc_googlemap_1_wrap,
+    .sc_googlemap_content {
+        max-width: 100%; /* Full width on smaller screens */
+        margin-right: 0; /* Remove right margin */
+    }
+}
