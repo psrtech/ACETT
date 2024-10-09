@@ -187,7 +187,7 @@
                             </a>
                         </div>
                     </div>
-            
+                
                     <div class="side_wrap" id="sideWrap">
                         <div class="close" id="closeButton">Close</div>
                         <div class="panel_top">
@@ -222,8 +222,9 @@
                         </div>
                     </div>
                 </div>
-            
+                
                 <div class="mask" id="mask" style="display:none;"></div>
+                
             
                 <script>
                     // Get the elements
@@ -231,30 +232,36 @@
                     const sideWrap = document.getElementById('sideWrap');
                     const closeButton = document.getElementById('closeButton');
                     const mask = document.getElementById('mask');
-                    const menuItems = document.querySelectorAll('.menu_main_nav a'); // Select all menu item links
-            
+                    const menuItems = document.querySelectorAll('#menu_main_mobile .menu-item a'); // More specific selector
+                
                     // Function to open the menu
                     menuButton.onclick = function() {
-                        sideWrap.classList.add('active');
+                        sideWrap.style.transform = 'translateX(0%)'; // Ensure it becomes visible
                         mask.style.display = 'block'; // Show mask
                     };
-            
+                
                     // Function to close the menu
                     function closeMenu() {
-                        sideWrap.classList.remove('active');
+                        sideWrap.style.transform = 'translateX(-100%)'; // Move the menu out of view
                         mask.style.display = 'none'; // Hide mask
                     }
-            
+                
                     closeButton.onclick = closeMenu;
-            
+                
                     // Close menu when clicking on the mask
                     mask.onclick = closeMenu;
-            
-                    // Optional: Close menu when clicking on a menu item
+                
+                    // Close menu when clicking on any menu item
                     menuItems.forEach(item => {
-                        item.onclick = closeMenu;
+                        item.addEventListener('click', function() {
+                            console.log('Menu item clicked!'); // For debugging: Check if this is triggered
+                            closeMenu(); // Close menu when any item is clicked
+                        });
                     });
                 </script>
+                
+                
+                
             
                 <style>
                     /* Add styles for the mobile menu */
