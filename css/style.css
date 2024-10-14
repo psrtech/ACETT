@@ -6737,3 +6737,17 @@ a.tribe-events-read-more:hover,
 .active .mask {
     display: block;
 }
+
+
+
+.sc_team {
+    display: flex;
+    justify-content: center; /* Center align all team members */
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+}
+
+.sc_team_item {
+    margin: 0 10px; /* Add some space between team items */
+}
+
+
