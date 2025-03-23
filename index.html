@@ -1589,7 +1589,7 @@
                                         <div style="text-align: center; margin-bottom: 20px; color: #777;">
                                             Please fill out the form below and we will get back to you shortly.
                                         </div>
-                                        <form id="contact-form" method="post" action="include/sendmail.php" style="display: flex; flex-direction: column;">
+                                        <form id="contact-form" style="display: flex; flex-direction: column;" action="https://formspree.io/f/xpwpdyvn" method="post">
                                             <div class="form-item" style="margin-bottom: 15px;">
                                                 <label class="required" for="form-name" style="margin-bottom: 5px;">Name</label>
                                                 <input id="form-name" type="text" name="username" placeholder="Name *" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
@@ -1607,12 +1607,14 @@
                                                 <textarea id="form-message" name="message" placeholder="Message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
                                             </div>
                                             <div class="form-item" style="text-align: center;">
-                                                <button type="submit" style="padding: 10px 20px; background-color: #A4BB63; color: white; border: none; border-radius: 4px; cursor: pointer;">Send Message</button>
+                                                <button type="submit" id="submit-btn" style="padding: 10px 20px; background-color: #A4BB63; color: white; border: none; border-radius: 4px; cursor: pointer;">Send Message</button>
                                             </div>
-                                            <div class="result" style="text-align: center; margin-top: 10px;"></div>
+                                            <div class="result" id="form-result" style="text-align: center; margin-top: 10px;"></div>
                                         </form>
                                     </div>
                                 </div>
+                                
+                               
                                 
                                 
                                 
