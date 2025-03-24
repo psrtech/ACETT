@@ -42,12 +42,101 @@
         <link rel="stylesheet" href="js/swiper/swiper.min.css" type="text/css" media="all" />
 
         <style>
+
+.our-services-section {
+    background-color: #f5f5f5;
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-header p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Services Layout */
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Service Item Box */
+.service-item {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Hover Effect */
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Button */
+.service-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 28px;
+    background-color: #8DAE3B;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.service-link:hover {
+    background-color: #7a9832;
+}
+
+/* ✅ Tablet & PC - Horizontal Layout */
+@media (min-width: 768px) {
+    .services-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    #pro{
+        margin-left: 23%;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+}
         @media (max-width: 768px) {
             .hero-section{
                 min-height: 300px;
             }
             #rev_slider_1_1{
                 min-height: 250px;
+            }
+            #pro{
+                margin-left: 0% !important;
             }
 
             /**about section **/
@@ -90,7 +179,27 @@
     }
 
     /** Training Section **/
-            
+    
+    .our-services-section {
+    overflow: hidden;
+    }
+    .services-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Forces single-column layout */
+        gap: 20px; /* Space between items */
+        width: 100%;
+    }
+
+    .service-item {
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto; /* Centers each service */
+        padding: 25px;
+        border-radius: 8px;
+        box-sizing: border-box;
+        text-align: center;
+        background-color: #fff;
+    }
         }
         </style>
 
@@ -682,47 +791,36 @@
                     </div> -->
 
                     
-                    <div id="trainings" class="our-services-section" style="background-color: #f5f5f5; padding: 80px 0;">
-                        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                    <div id="trainings" class="our-services-section">
+                        <div class="container">
                             <!-- Section Title -->
-                            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
-                                <h2 style="font-size: 34px; font-weight: 700; color: #222; font-family: 'Poppins', sans-serif;">Our Trainings</h2>
-                                <p style="font-size: 16px; color: #666; margin-top: 15px; font-family: 'Poppins', sans-serif;">We offer a diverse range of training programs tailored to enhance your table tennis skills and meet your athletic goals.</p>
+                            <div class="section-header">
+                                <h2>Our Trainings</h2>
+                                <p>We offer a diverse range of training programs tailored to enhance your table tennis skills and meet your athletic goals.</p>
                             </div>
                     
                             <!-- Services Grid -->
-                            <div class="services-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
-                    
+                            <div class="services-list">
                                 <!-- Service 1 -->
-                                <div class="service-item" style="background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); text-align: center; transition: all 0.4s ease; position: relative;">
-                                    <div class="service-icon" style="margin-bottom: 25px;">
-                                    </div>
-                                    <h3 style="font-size: 22px; font-weight: 600; color: #333; font-family: 'Poppins', sans-serif;">Personal Training</h3>
-                                    <p style="font-size: 15px; color: #777; margin-top: 15px;">Achieve your fitness goals with personalized training programs tailored to your needs, ensuring individual attention for fast improvement.</p>
-                                    <a href="./personal.html" class="service-link" style="display: inline-block; margin-top: 30px; padding: 12px 28px; background-color: #8DAE3B; color: #fff; font-size: 14px; border-radius: 5px; text-decoration: none;">Learn More</a>
-                                    <div class="service-hover" style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.05); border-radius: 10px; opacity: 0; transition: all 0.3s ease;"></div>
+                                <div class="service-item">
+                                    <h3>Personal Training</h3>
+                                    <p>Achieve your fitness goals with personalized training programs tailored to your needs, ensuring individual attention for fast improvement.</p>
+                                    <a href="./personal.html" class="service-link">Learn More</a>
                                 </div>
                     
                                 <!-- Service 2 -->
-                                <div class="service-item" style="background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); text-align: center; transition: all 0.4s ease; position: relative;">
-                                    <div class="service-icon" style="margin-bottom: 25px;">
-                                    </div>
-                                    <h3 style="font-size: 22px; font-weight: 600; color: #333; font-family: 'Poppins', sans-serif;">Batch Training</h3>
-                                    <p style="font-size: 15px; color: #777; margin-top: 15px;">Group-based training sessions designed to boost fitness through shared motivation, expert guidance, multiball drills, and engaging group activities.</p>
-                                    <a href="./batch.html" class="service-link" style="display: inline-block; margin-top: 30px; padding: 12px 28px; background-color: #8DAE3B; color: #fff; font-size: 14px; border-radius: 5px; text-decoration: none;">Learn More</a>
-                                    <div class="service-hover" style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.05); border-radius: 10px; opacity: 0; transition: all 0.3s ease;"></div>
+                                <div class="service-item">
+                                    <h3>Batch Training</h3>
+                                    <p>Group-based training sessions designed to boost fitness through shared motivation, expert guidance, multiball drills, and engaging group activities.</p>
+                                    <a href="./batch.html" class="service-link">Learn More</a>
                                 </div>
                     
                                 <!-- Service 3 -->
-                                <div class="service-item" style="background-color: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); text-align: center; transition: all 0.4s ease; position: relative;">
-                                    <div class="service-icon" style="margin-bottom: 25px;">
-                                    </div>
-                                    <h3 style="font-size: 22px; font-weight: 600; color: #333; font-family: 'Poppins', sans-serif;">Fitness </h3>
-                                    <p style="font-size: 15px; color: #777; margin-top: 15px;">Achieve your health goals with personalized fitness programs, emphasizing the importance of fitness in overall well-being. Our club’s certified coaches provide expert guidance to empower and transform your lifestyle.</p>
-                                    <a href="./fitness.html" class="service-link" style="display: inline-block; margin-top: 30px; padding: 12px 28px; background-color: #8DAE3B; color: #fff; font-size: 14px; border-radius: 5px; text-decoration: none;">Learn More</a>
-                                    <div class="service-hover" style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.05); border-radius: 10px; opacity: 0; transition: all 0.3s ease;"></div>
+                                <div class="service-item">
+                                    <h3>Fitness</h3>
+                                    <p>Achieve your health goals with personalized fitness programs, emphasizing the importance of fitness in overall well-being. Our club’s certified coaches provide expert guidance to empower and transform your lifestyle.</p>
+                                    <a href="./fitness.html" class="service-link">Learn More</a>
                                 </div>
-                    
                             </div>
                         </div>
                     </div>
@@ -1131,7 +1229,7 @@
 
                                                 <div class="sc_team sc_team_style_team-3 margin_bottom_small width_100_per">
 
-                                                    <div class="column-1_2 column_padding_bottom" style="margin-left: 23%; margin-bottom: 50px;">
+                                                    <div class="column-1_2 column_padding_bottom propreity" id="pro">
 
                                                         <div class="sc_team_item sc_team_item_5 odd columns_wrap">
 
